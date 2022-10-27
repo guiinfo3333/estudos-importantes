@@ -1,0 +1,37 @@
+rodando kafka 
+
+bin/kafka-server-start.sh config/server.properties
+
+rodando zookeper
+
+sh bin/zookeeper-server-start.sh config/zookeeper.properties
+
+criando um tópico
+
+bin/kafka-topics.sh --create --bootstrap server localhost:9092 --replication-factor 1 --partitions 1 --topic LOJA_NOVOPEDIDO
+
+listando tópicos
+
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+criando um producer com uma mensagem
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic LOJA_NOVOPEDIDO
+
+
+consumer
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic LOJA_NOVOPEDIDO
+
+OBS: add flag --from-beginning para a partir de agora
+
+listando todos os grupos
+
+bin/kafka-consumer-groups.sh --all-groups --bootstrap-server localhost:9092 --describe
+
+alterando configuracoes de partitions
+
+nano config/server.properties
+
+
+
