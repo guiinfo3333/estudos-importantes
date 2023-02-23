@@ -13,8 +13,7 @@ Ex:
     (85) 98533-7315
 
 
-### 2) "." significa qualquer caractere em regex. Assim quando quiser localizar o ponto realmente, usando um caractere
-    de escape.  Ex: /\./g. E a mesma coisa acontece com "*", basta botar um contra barra.
+### 2) "." significa qualquer caractere em regex. Assim quando quiser localizar o ponto realmente, usando um caractere de escape.  Ex: /\./g. E a mesma coisa acontece com "*", basta botar um contra barra.
 
     Ex: Teste. Alo. Tamo junto.
 
