@@ -2,6 +2,8 @@ Site para teste:---  https://regexr.com/
 
 Site de exercicíos de Regex --- https://regexcrossword.com/
 
+Video aula: -- https://www.youtube.com/watch?v=wfs0-ioxJVo&list=PL61kTUcYddBMZySkgjHtiwasOAknTDbgs&index=14
+
 ### 1)  /-\d\d\d5/g     --- "Três caracteres seguido de uma barra e um 5 depois  /d significa dígito de 0 a 9
 
 Ex:
