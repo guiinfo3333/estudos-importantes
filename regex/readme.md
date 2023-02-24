@@ -1,5 +1,7 @@
 Site para teste:---  https://regexr.com/
 
+Site de exercicíos de Regex --- https://regexcrossword.com/
+
 ### 1)  /-\d\d\d5/g     --- "Três caracteres seguido de uma barra e um 5 depois  /d significa dígito de 0 a 9
 
 Ex:
@@ -64,7 +66,7 @@ incluir os relevantes papéis do autor e do leitor na construção de textos e e
 
 ### 12) Lazy selecao, seleção preguiçosa
     Expressão: /<p>.*</p>\g -- Desse jeito, iria seleclionar o exemplo por completo, mas se colocarmos um
-    ponto de interrogação no final ele separa. Ficando assim /<p>.*?</p>\g
+        ponto de interrogação no final ele separa. Ficando assim /<p>.*?</p>\g
     Ex: <p>Primeiro Parágrafo</p><p>Segundo Parágrafo</p><p>Terceiro Parágrafo</p><p></p>
 
 
@@ -107,6 +109,26 @@ incluir os relevantes papéis do autor e do leitor na construção de textos e e
         Guilherme Pecador
 
         Guilherme Antônio
+
+
+### 16 - Referenciando Grupos anteriores
+    /b(\w+)\s\1\b     - "b" significa limite de palavra, seguido de um grupo de palavras com um 1 ou mais caracteres se
+    seguido de espaço. E "\1" se refere ao grupo anterior que é (\w+)
+
+    Ex: Hoje livre livre sou, tenho sede da tua graça graça cada dia mais.
+
+    Ele é bom para evitar repetições.
+
+### 17 - Or Boleano
+    \b\w{1}\b|\b\w{2}\b|\b\w{3}\b|\b\w{4}\b|\b\w{5}\b|\b\w{6}\b
+
+    "b" é boundary que significa limite, ou seja na primeira parte seleciona todas as palavras com 1 caractere, outra com 2, até 6,
+    sendo separado pelo "ou" que é "|"
+
+    Ex: Hoje livre livre sou, tenho sede da tua graça graça cada dia mais.
+
+
+
 
 
 
