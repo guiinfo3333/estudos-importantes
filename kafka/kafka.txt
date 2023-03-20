@@ -8,7 +8,9 @@ sh bin/zookeeper-server-start.sh config/zookeeper.properties
 
 criando um tópico
 
-bin/kafka-topics.sh --create --bootstrap server localhost:9092 --replication-factor 1 --partitions 1 --topic LOJA_NOVOPEDIDO
+//192.168.0.106
+
+bin/kafka-topics.sh --create --bootstrap server 192.168.0.106:9092 --replication-factor 1 --partitions 1 --topic LOJA_NOVOPEDIDO
 
 listando tópicos
 
@@ -16,12 +18,12 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
 criando um producer com uma mensagem
 
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic LOJA_NOVOPEDIDO
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic WAITING_FOR_PROCESSING
 
 
 consumer
 
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic LOJA_NOVOPEDIDO
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic WAITING_FOR_PROCESSING
 
 OBS: add flag --from-beginning para a partir de agora
 
