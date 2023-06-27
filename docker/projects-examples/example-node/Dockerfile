@@ -9,6 +9,8 @@ RUN npm run build
 
 EXPOSE 3000
 
+RUN apk add --no-cache bash
+
 CMD ["npm", "run", "start"]
 
 # docker build -t example/node .  --CRIA IMAGEM
