@@ -131,6 +131,13 @@ EXPOSE 5000
 
 ## 34 - Exibi logs do docker compose 
     docker-compose logs
+
+## 35 - Apaga todas imagens locais
+    docker rmi $(docker images -q) -f
+
+## 36 - Apaga todos os container que estao parados
+    docker container prune
+
     
 
 
