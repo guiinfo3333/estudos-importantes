@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx   #nome do POD
+  labels:
+    name: nginx   #label do POD caso queira encontrar para algum filtro
+spec:             #parte da especificação dos containers que vao rodar no pod
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+      - containerPort: 80

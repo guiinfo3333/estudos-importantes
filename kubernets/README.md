@@ -17,4 +17,19 @@
     WORK - o nó work é onde os container estão sendo executados e recebe as tarefas agendadas pelo nó mestre e
             as executa
 
-## 5- 
+## Comandos
+    1- Executando kubernets através do kind que roda kubernets utilizando docker https://kind.sigs.k8s.io/
+    2 - kind create cluster  -- criar o Cluter kubernets
+    3- kubectl cluster-info --context kind-kind     executar esse comando para ele saber qual é p cluster
+    4- kubectl get nodes  -- exibe quias nodes estão naquele cluster
+    5- kubectl apply -f pod.yaml  --aplica o manifesto q eu criei no kubernets
+    6- kubectl get pods  -- mostra quais pods estão rodando
+    7- kubectl delete pod nginx -- deleta o pod do nginx que foi criado
+
+
+## Mas se o pod tiver problema e ficar fora do ar? Assim entra o conceito de ReplicaSet que gerencia os PODS, ve se esta no ar
+    1- kubectl apply -f replicaset.yaml  //aplicaca o replicaset
+    2- kubectl get res   // verifica quais são os replicaset criados
+
+## Acessando o container pela porta
+    kubectl port-forward pod/nginx-vw5wc 8080:80   //redireciona do pc meu da 8080 para 80 do container

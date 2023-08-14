@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:  #nome do replica set
+  name: nginx
+spec:
+  replicas: 10
+  selector:
+    matchLabels:  #toda vez que buscar uma label com nginx, esse pode q ele vai buscar
+      app: nginx
+  template:  #template é o nosso pod q pode ser o mesmo do pod q já tinha sido feito
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
