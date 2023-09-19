@@ -26,3 +26,23 @@
     chmod u+x text.text  //permissao de execucao
     chmod u+w text.text  //permissao de escrita
     chmod u+r text.text  //permissao de leitrua
+
+## 10 - Criando crons no linux ()
+    crontab
+
+## 11- Criando crontab
+    crontab -e <enter>
+## 12 - Digitando entrada
+    00 19 * * * touch teste.txt <enter>
+
+## 13 - Listando crontabs
+    crontab -l 
+
+## 14- As vezes pode dar um problema no cron no linux, executar este comando para ver se estar rodando, normalmente é pq o DAEMON dele está desligado
+     pgrep cron
+
+## 15 - Mostra log do Cron
+    cat /var/log/syslog | grep cron
+
+
+    
