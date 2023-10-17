@@ -34,5 +34,17 @@ alterando configuracoes de partitions
 
 nano config/server.properties
 
+vendo configurações do tópico
+
+bin/kafka-topics.sh --describe --topic mil --bootstrap-server 192.168.0.107:9092
+
+aumentando quantidade de partições do kafka
+
+bin/kafka-topics.sh --alter --topic mil --partitions 1 --bootstrap-server 192.168.0.107:9092
+
+
+
+
+
 
 
