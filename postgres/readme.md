@@ -12,6 +12,8 @@
 
 ## 6- Liberando conexões remotas
 
+SHOW data_directory;
+
 nano /etc/postgresql/14/main/postgresql.conf    colocar -->  listen_addresses = '*'  
 
 nano /etc/postgresql/14/main/pg_hba.conf
